@@ -40,9 +40,11 @@ Máte k dispozici
 
     Určeno pro domovní telefon, například ve výškovém domě.
 
-    Komunikace se dá ustavit odesláním zprávy na topic: `/smart-doorbell/sound` <- `phone-call-start`
+    Komunikace se dá ustavit odesláním zprávy na topic:
+        -   `/smart-doorbell/sound` <- `phone-call-start`
     K ukončení komunikace dojde buď automaticky po 30 sekundách (lze do budoucna nakonfigurovat)
-    nebo odesláním zprávy na topic: `/smart-doorbell/sound` <- `phone-call-stop`
+    nebo odesláním zprávy na topic:
+        -   `/smart-doorbell/sound` <- `phone-call-stop`
 
     Reproduktory se zapojují dle bodu výše, první mikrofon se zapojuje do USB konektory na Raspberry Pi,
     druhý konektor se zapojuje do USB zvukové karty SYBA.
@@ -55,6 +57,7 @@ Máte k dispozici
     Možné piny: `A5`, `A4`, `A3`, `A2`, `A1`, `A0`
 
     Tedy možné topicy + zpráva (která z nich příchází):
+
         -   `/smart-doorbell/button/9` -> `pressed`
         -   `/smart-doorbell/button/10` -> `pressed`
         -   `/smart-doorbell/button/22` -> `pressed`
