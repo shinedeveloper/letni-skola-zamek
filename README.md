@@ -5,13 +5,13 @@ Cílem je vytvořit prototyp domovního zvonku pro smart home, včetně kamery.
 
 Veškerá komunikace přes internet probíhá přes cloudový MQTT server (broker) HiveMQ, který je zdarma:
 
-| Název             | Hodnota           |
-|-------------------|-------------------|
-| Adresa            | mqtt.flespi.io    |
-| Port (Web Socket) | 443               |
-| SSL               | Ano               |
-| Username          | tMkzlICVonkEjrtHJOzM9ObNoV1fq3fHFq5OWxAbKIFRXZpvBO7yq69DQ0I6ROCk |
-| Heslo (prázdné)   |                   |
+| Název             | Hodnota                                             |
+|-------------------|-----------------------------------------------------|
+| Host              | d57a0d1c39d54550b147b58411d86743.s2.eu.hivemq.cloud |
+| Port (Web Socket) | 8884                                                |
+| SSL               | Ano                                                 |
+| Username          | robot                                               |   
+| Heslo             | P@ssW0rd!                                           |
 
 
 Čísla pinů na Raspberry PI:
@@ -111,5 +111,5 @@ Máte k dispozici
 -   Pohyb servo motorem
 
     Motorem lze pohybovat odesláním hodnoty úhlu (číslo ve stupních) na správný topic:
-    -   `/smart-doorbell/servo/1` ← `90`
-    -   `/smart-doorbell/servo/2` ← `270`
+    -   `/smart-doorbell/servo/12` ← `90`
+    -   `/smart-doorbell/servo/13` ← `270`
