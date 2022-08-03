@@ -14,7 +14,7 @@ Veškerá komunikace přes internet probíhá přes cloudový MQTT server (broke
 | Heslo             | P@ssW0rd!                                           |
 
 
-Čísla pinů na Raspberry PI:
+Čísla GPIO na Raspberry PI:
 
 ![RPi Pinout](Raspberry-Pi-pinout.png)
 
@@ -75,14 +75,22 @@ Máte k dispozici
 
     Vyfocení fotky: 
     -   `/smart-doorbell/photo` ← `snapshot`
+    -   `/smart-doorbell/photo` ← `snapshot-vflip`
+    
+    Varianta `-vflip` generuje obrázek vertikálně otočený.
 
-    Výsledná fotka je uploadovná na cloudovou službu ImgBB a její adresa je odeslána do topicu:
+    Výsledná fotka je uploadována na cloudovou službu ImgBB.com a její adresa je odeslána do topicu:
     -   `/smart-doorbell/photo/taken` → `https://imgbb.com/i/3256987265.jpg`
 
 - Pravidelné focení fotek po určitou dobu
     -   `/smart-doorbell/photo` ← `recording-start`
+    -   `/smart-doorbell/photo` ← `recording-start-vflip`
     -   `/smart-doorbell/photo` ← `recording-stop`
-    -   `/smart-doorbell/photo/taken` → `https://imgbb.com/i/3256987265.jpg`
+
+  Varianta `-vflip` generuje obrázek vertikálně otočený.
+
+  Výsledné fotky jsou pravidelně uploadovány na cloudovou službu ImgBB.com a jejich adresa je pokaždé odeslána do topicu:
+      -   `/smart-doorbell/photo/taken` → `https://imgbb.com/i/156584235.jpg`
 
 - Rozsvícení LED
     -   `/smart-doorbell/led/7` ← `on`
