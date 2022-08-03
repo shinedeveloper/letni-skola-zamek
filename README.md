@@ -54,7 +54,7 @@ Máte k dispozici
 
 -   Klasická tlačítka (až 5 kusů)
 
-    Ovládají se přes MQTT topic `/smart-doorbell/button/<i>ČÍSLO_PINU_NA_RASPBERRY_PI</i>`, kam je tlačítko připojeno.
+    Ovládají se přes MQTT topic `/smart-doorbell/button/ČÍSLO_PINU_NA_RASPBERRY_PI`, kam je tlačítko připojeno.
 
     Možné piny: `9`, `10`, `22`, `27`, `17`
 
