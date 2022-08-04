@@ -121,3 +121,26 @@ Máte k dispozici
     Motorem lze pohybovat odesláním hodnoty úhlu (číslo ve stupních) na správný topic:
     -   `/smart-doorbell/servo/12` ← `90`
     -   `/smart-doorbell/servo/13` ← `270`
+
+
+-   Zjištění obsazenosti schránky
+
+    Pokud pošťák vloží balíček do schránky, je třeba na to umět detekovat.
+    Asi nejpraktičtější způsob detekce je senzor vzdálenosti od překážky.
+    Tedy buď od druhé stěny schránky nebo od balíčku, když bude vložen.
+    Ve schránce lze nainstalovat tento senzor a zjistit, jak daleko od druhé stěny 
+    je nainstalovaný. Tato hodnota se při vložení balíčku do schránky
+    významně změní (zmenší).
+    
+    Zjištění aktuální vzdálenosti od stěny / balíčku:
+    -   `/smart-doorbell/distance` ← `measure-now`
+    
+    Senzor zpátky odešle vzdálenost v cm. Např 15,56621 cm:
+    -   `/smart-doorbell/distance/measured` → `15.56621`
+
+    Je možné si zapnout notifikaci, která se vyvolá,
+    když se před senzorem ocitne překážka
+    blíže než `X` cm. Například `15,678`.
+    
+    Poznámka: Testuje se v 5sekundových intervalech.
+    -   `/smart-doorbell/distance` ← `notify-when-shorter-then(15.678)`
